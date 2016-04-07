@@ -1,5 +1,5 @@
-# SmartQQ
-SmartQQ Robot By Golang.
+# SmartQQ By Golang
+SmartQQ Package By Golang.
 ##简介
 1.基于 Smart QQ（Web QQ） 的 Api 封装，你可以用这个 Api 制作属于自己的 QQ 机器人！<be/>
 2.提供的接口包括接收QQ好友、QQ群、QQ讨论组消息，并可以主动或被动的发送消息给好友、群、讨论组。<br/>
