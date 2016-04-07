@@ -3,10 +3,8 @@ package smartqq
 import (
 	"errors"
 	"fmt"
-	"http_client"
 	"regexp"
 	"strings"
-	//	"sync"
 	"time"
 
 	"github.com/bitly/go-simplejson"
@@ -14,7 +12,7 @@ import (
 
 type QClient struct {
 	IsLogin      bool
-	HttpClient   *http_client.Client
+	HttpClient   *Client
 	onQRChange   func(*QClient, []byte)
 	onLogined    func(*QClient)
 	onMessage    func(*QClient, QMessage)
@@ -206,7 +204,7 @@ func (qc *QClient) sendMsg(sendType string, toUin int, msg string) {
 }
 
 func (qc *QClient) Run() {
-	client := http_client.Client{
+	client := Client{
 		IsKeepCookie: true,
 		Header: map[string]string{
 			"Host":                      "d1.web2.qq.com",
